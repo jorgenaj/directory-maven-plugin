@@ -104,7 +104,7 @@ public class HighestBasedirGoal
         if ( files.size() > 1 )
         {
             final File next = files.get( 1 );
-            if ( !next.getAbsolutePath().startsWith( dir.getAbsolutePath() ) )
+            if ( !next.getAbsolutePath().toLowerCase().startsWith( dir.getAbsolutePath().toLowerCase() ) )
             {
                 throw new MojoExecutionException( "Cannot find a single highest directory for this project set. "
                     + "First two candidates directories don't share a common root." );
